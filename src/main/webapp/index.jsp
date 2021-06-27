@@ -5,7 +5,7 @@
 
    <body>
 
-      your turn:<br/>
+      your turn is:<br/>
       <a href="#" onclick="playRoshambo('rock')"> rock </a>
       <a href="#" onclick="playRoshambo('paper')"> paper </a>
       <a href="#" onclick="playRoshambo('scissors')"> scissors </a>
