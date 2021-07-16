@@ -24,4 +24,4 @@ echo "move war to webapps"
 cp -r  /var/lib/jenkins/workspace/SampleJob/target/roshambo*  $home/webapps
 
 echo "start tomcat"
-$START
+exec $START
