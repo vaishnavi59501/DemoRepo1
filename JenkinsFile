@@ -1,0 +1,47 @@
+pipeline{
+    agent any
+    tools{
+        maven 'maven'
+    }
+    stages{
+        stage("Tools Initialisation"){
+            steps{
+                 sh "mvn --version"
+            }
+        }
+        stage("Checkout"){
+            steps{
+                 git branch: 'main',
+                url: "https://github.com/vaishnavi59501/DemoRepo1.git"
+            }
+           
+        }
+        stage("Cleaning Workspace"){
+            steps{
+                 sh "mvn clean"
+            }
+        }
+        stage("Build"){
+            steps{
+                  sh "mvn install"
+            }
+        }
+        stage("Running Testcase"){
+            steps{
+                 sh "mvn test"
+            }
+        }
+        stage("Packaging"){
+            steps{
+                sh "mvn package -DskipTests"
+            }
+        }
+        stage("Deploying")
+        {
+            steps{
+                  sh "sudo ./deployscript.sh"
+            }
+        }
+        
+    }
+}
