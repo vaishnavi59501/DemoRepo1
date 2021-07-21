@@ -4,11 +4,15 @@
 if [ $1 -gt $2 ]
 then
     echo $1 "is greater"
+elif [ $1 -eq $2 ]
+then
+    echo $1 "&" $2 "are equal"
 else
     echo $2 "is greater"
 fi
 
 echo the script name is $0
+echo PID of script is $$
 echo total arguments count is $#
 echo last return code $?
 echo all arguments $*
