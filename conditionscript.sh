@@ -9,7 +9,6 @@ else
 fi
 
 echo the script name is $0
-echo PID of script is $$
 echo total arguments count is $#
 echo last return code $?
 echo all arguments $*
