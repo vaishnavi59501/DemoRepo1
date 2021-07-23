@@ -15,4 +15,6 @@ sed '3s/color//g' $path
 echo "-------------------"
 #dispalying specific column value
 sed '4s/[^:]* \([^:]* \)[^:]*/\1/' $path
-sed 'i\the saying' $path
+sed '=' $path
+sed -n '/color/=' $path
+
