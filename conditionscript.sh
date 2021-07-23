@@ -10,7 +10,7 @@ then
 else
     echo $2 "is greater"
 fi
-
+#other parameters
 echo the script name is $0
 echo PID of script is $$
 echo total arguments count is $#
