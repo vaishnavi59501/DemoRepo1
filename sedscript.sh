@@ -1,5 +1,4 @@
 #!/bin/sh
-#shell variables
 path=/home/devopsadmin/sample.txt
 #replacing single word in a line"
 echo "I am tom" | sed 's/tom/john/'
