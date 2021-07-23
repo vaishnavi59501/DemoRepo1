@@ -1,5 +1,4 @@
 #!/bin/sh
-
 path=/home/devopsadmin/test.txt
 #replacing single word in the below line
 echo "hi everyone" | awk '{sub(/hi/,"hello"); print}'
