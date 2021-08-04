@@ -2,7 +2,7 @@ pipeline{
     agent any
     tools{
         maven 'maven'
-        jdk 'jdk11'
+        //jdk 'jdk11'
     }
     options {
                 buildDiscarder logRotator(artifactDaysToKeepStr: '15', artifactNumToKeepStr: '10', daysToKeepStr: '15', numToKeepStr: '10')
@@ -11,7 +11,7 @@ pipeline{
         stage("Tools Initialisation"){
             steps{
                  sh "mvn --version"
-                 sh "java -version"
+                 //sh "java -version"
             }
         }
         stage("Checkout"){
