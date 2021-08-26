@@ -1,4 +1,5 @@
 #!/bin/python3
+#this scipt file contains list,tuple,dictionary and implementation of functions on list,tuple and Dictionary
 
 #list
 #list is collection of objects of different types and it is enclosed in square brackets.
@@ -23,8 +24,6 @@ print(li)
 a=1997
 print(a in li) #returns true if a is member of list otherwise false
 
-#list1, list2 = [123, 'xyz'], [456, 'abc']
-
 print(len(li)) #returns the no of elements in list
 
 print(max(list3)) #returns maximum element in list list3
@@ -44,6 +43,7 @@ print(list3)
 del list3[3] #deletes the element at index 3 in list3
 print(list3)
 
+
 #tuple
 #tuple is similar to list but the difference is elements are enclosed using braces () and here updating tuple is not valid action.
 tup=(23,) #declaring tuple with single element along with character comma
@@ -54,6 +54,7 @@ print(tup+(34,36,37)) #adding elements to tuple
 print(len(tup)) #returns the no of elements in tuple
 
 print(tuple(li)) #converts list li to tuple
+
 
 #Dictionary
 #Dictionary is kind of hash table type whicl has key-value pairs
