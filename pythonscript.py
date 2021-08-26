@@ -1,12 +1,12 @@
 #!/bin/python3
 import sys
 
+#this script file accepts command line arguments like name and values for variables a,b,c
 #variable
 #name=input("Enter you name: ")
 # sys module helps in accessing command line arguments into the script
 '''len(sys.argv) returns the no of arguments including script and
  sys.argv returns the arguments in list  '''
-
 print(len(sys.argv))
 print(sys.argv)
 
@@ -14,23 +14,20 @@ print("Hi ",sys.argv[1]) #sys.argv[0] returns the script name, actual arguments 
 
 eng,maths,sci=45,56,57 #multiple assignments in single line
 tot_mark=eng+maths+sci
-
 print(tot_mark)
 
+#accepts command line arguments
 a,b,c=int(sys.argv[2]),int(sys.argv[3]),int(sys.argv[4])
 print(a+b+c)
 
 
 #string manipulation
-
 sentence="how are you"
-
 print(sentence[0]) #accessig first charter in string sentence using slice of operator
 print(sentence[:7]) #accessing range of characters using [:]
 print(sentence[2:]) 
 print(sentence*4) #displaying sentence four times with repetition operator(*)
 print(sentence +" hope doing well") #concatenating with another string
-
 print(sentence[:4]+"do you do") #updating existing string at index four
 print("%s"%sentence) #%s is the string format specifier to print the sentence
 print(r"C:\\nowhere") #r denotes raw string this helps to suppress the actual meaning of escape character and gets it displayed like normal string, r should be given in preceding to the quotation
@@ -42,7 +39,6 @@ TAB ( \t ) and they will show up that way when displayed.
 NEWLINEs within the string, whether explicitly given like
 this within the brackets [ \n ], or just a NEWLINE within
 the variable assignment will also show up."""
-
 print("%s"%para)
 
 
@@ -79,7 +75,7 @@ print(sentence.islower()) #islower() method returns true if string is in lower c
 Str="00000000hello everyone000000000"
 print(Str.strip('0')) #strip() method performs both lstrip and rstrip i.e truncating leading and trailing padded filler character (say for example filler char '0'
 print(Str.lstrip('0')) #lstrip() method removes leading filler char
-print(Str.rstrip('0')) #rstruo() method removes trailing filler char
+print(Str.rstrip('0')) #rstrip() method removes trailing filler char
 
 print(len(sentence)) #len() method returns the no of characters in the string
 
