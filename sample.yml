@@ -1,7 +1,7 @@
 ---
 - name: sample playbook
   hosts: server
-  remote-user: vaishnavi16d107
+  remote_user: vaishnavi16d107
   become: true
   tasks:
     - name: installing httpd
