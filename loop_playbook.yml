@@ -1,0 +1,23 @@
+---
+- name: loop playbook
+  hosts: all
+  become: true
+  tasks:
+       - name: multiple users in control node using loop
+         user:
+             name: "{{item}}"
+             state: present
+         loop:
+            - nick
+            - mike
+            - john
+       - name: multiple users with id
+         user:
+            name: "{{item.name}}"
+            uid: "{{item.uid}}"
+            state: present
+         with_items:
+                 - name: boo
+                   uid: 1030
+                 - name: bob
+                   uid: 1035

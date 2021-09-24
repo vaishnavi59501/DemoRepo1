@@ -1,0 +1,40 @@
+---
+- name: condition playbook
+  hosts: all
+  vars:
+     sample: "Hello World"
+  tasks:
+       - name: displaying list that satisfies condition
+         shell: echo "{{item}}"
+         loop:
+             - 8
+             - 2
+             - 10
+             - 12
+         when: item > 5
+       - name: checking equal
+         debug:
+              msg: "Equal"
+         when: sample == "Hello World"
+       - name: checking not equal
+         debug:
+              msg: "not equal"
+         when: sample != "Hello World"
+       - name: checking part of word
+         debug:         
+              msg: "the variable sample contains particular string"
+         when: sample.find("Hello") != -1
+       - name: checking file is empty
+         shell: cat test.txt
+         register: output
+         
+       - name: true condition
+         debug:
+              msg: "file is empty"
+         when: output.stdout == " "
+       - name: false condition
+         debug:
+              msg: "file is not empty"
+         when: output.stdout != " "
+       
+

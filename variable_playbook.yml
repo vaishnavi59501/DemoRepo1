@@ -1,0 +1,24 @@
+---
+- name: variable playbook
+  hosts: all
+  become: true
+  tasks:
+      - name: listing of files in control node and capturing in a variable
+        shell: ls -al
+        register: terminal_output
+      - name: uptime of control node (uptime tells the running of system, checks whether user logged in)
+        shell: uptime
+        register: output
+      - name: viewing a file
+        shell: cat test.txt
+        register: fileOutput
+      - name: displaying test file contents
+        debug:
+             msg:
+                - "{{fileOutput}}"
+      - name: displaying shell output
+        debug: 
+             var: terminal_output.stdout_lines
+      - name: displaying the variable in terminal
+        debug:
+             var: output.stdout_lines

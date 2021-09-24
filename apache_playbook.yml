@@ -1,0 +1,6 @@
+---
+- name: apache playbook using roles
+  hosts: all
+  become: true
+  roles:
+      - apache

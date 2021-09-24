@@ -1,0 +1,28 @@
+---
+ - name: sample1 playbook
+   hosts: all
+   become: true
+   tasks:
+      - name: creating file
+        file:
+            path: /home/vaishnavi16d107/test.txt
+            state: touch
+      - name: editing content
+        copy:
+            content: "this is test file"
+            dest: /home/vaishnavi16d107/test.txt
+      - name: creating multiple files
+        file:
+            path: "{{item}}"
+            state: touch
+        with_items:
+                - test1.txt
+                - test2.txt
+      - name: deleting file
+        file:
+            path: /home/vaishnavi16d107/test2.txt
+            state: absent
+
+
+
+
